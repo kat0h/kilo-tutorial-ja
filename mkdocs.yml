@@ -1,1 +1,8 @@
 site_name: Kilo tutorial
+
+theme:
+  name: mkdocs
+  language: ja
+
+markdown_extensions:
+  - codehilite:
