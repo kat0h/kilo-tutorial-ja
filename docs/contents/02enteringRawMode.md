@@ -1,74 +1,97 @@
-# Entering raw mode
+# Rawモードに入る
 
-Let's try and read keypresses from the user. (The lines you need to add are
-highlighted and marked with arrows.)
+ユーザーからのキー入力を読み取ってみましょう。
 
-{{read}}
+```c
++ #include <unistd.h>
+  int main() {
++  char c;
++  while (read(STDIN_FILENO, &c, 1) == 1);
+   return 0;
+  }
+```
 
-`read()` and `STDIN_FILENO` come from `<unistd.h>`. We are asking `read()` to
-read `1` byte from the standard input into the variable `c`, and to keep doing
-it until there are no more bytes to read. `read()` returns the number of bytes
-that it read, and will return `0` when it reaches the end of a file.
 
-When you run `./kilo`, your terminal gets hooked up to the standard input, and
-so your keyboard input gets read into the `c` variable. However, by default
-your terminal starts in **canonical mode**, also called **cooked mode**. In
-this mode, keyboard input is only sent to your program when the user presses
-<kbd>Enter</kbd>. This is useful for many programs: it lets the user type in a
-line of text, use <kbd>Backspace</kbd> to fix errors until they get their input
-exactly the way they want it, and finally press <kbd>Enter</kbd> to send it to
-the program. But it does not work well for programs with more complex user
-interfaces, like text editors. We want to process each keypress as it comes in,
-so we can respond to it immediately.
+`read()`と`STDIN_FILENO`は`<unistd.h>`から来ています。
+これは、読み込むデータが無くなるまで`read()`に標準入力から1byte読み込み、変数`c`に設定するよう命令しています。
+`read()`は読み込んだbyte数を返し、ファイルの終端（End Of File）に達すると`0`を返します。
 
-What we want is **raw mode**. Unfortunately, there is no simple switch you can
-flip to set the terminal to raw mode. Raw mode is achieved by turning off a
-great many flags in the terminal, which we will do gradually over the course of
-this chapter.
+`./kilo`を実行したときターミナルは標準入力をフックし、あなたのキーボード入力を変数`c`に代入します。
+しかしながら、デフォルトではターミナルは**canonicalモード**（cookedモード）で開始します。
+このモードでは、ユーザーが<kbd>Enter</kbd>キーを押した時のみにキー入力がプログラムに送信されます。
+このモードは、ユーザーは入力中の間違いを確定するまで、<kbd>Backspace</kbd>で修正することがでるため、
+一行のテキストを入力させるプログラムで有用です。
+しかし、これはテキストエディターのような複雑なユーザーインターフェイスを持つプログラムではうまく機能しません。
+キー入力が来るたびに処理をしたいので、即座に反応する必要があります。
 
-To exit the above program, press <kbd>Ctrl-D</kbd> to tell `read()` that it's
-reached the end of file. Or you can always press <kbd>Ctrl-C</kbd> to signal
-the process to terminate immediately.
+私たちが欲しいのは**Raw モード**です。
+不幸なことに、ターミナルをRaw モードに設定するシンプルなスイッチは存在しません。
+Raw モードにはターミナルの非常に多くのフラグをへし折ることによって入ることができます。
+この章の過程を通して徐々に達成していきます。
 
-## Press <kbd>q</kbd> to quit?
+下記のプログラムを終了するには、<kbd>Ctrl-D</kbd>をタイプして`read()`にファイルの終端に達したことを伝えてください。
+また、<kbd>Ctrl-C</kbd>をタイプしてプロセスに終了シグナルを送ることもできます。
 
-To demonstrate how canonical mode works, we'll have the program exit when it
-reads a <kbd>q</kbd> keypress from the user. (Lines you need to change are
-highlighted and marked the same way as lines you need to add.)
+## <kbd>q</kbd>をタイプして終了
 
-{{press-q}}
+カノニカルモードがどのように機能するか示すために、ユーザーから<kbd>q</kbd>を受けとった時にプログラムを終了するようにしましょう。
 
-To quit this program, you will have to type a line of text that includes a `q`
-in it, and then press enter. The program will quickly read the line of text one
-character at a time until it reads the `q`, at which point the `while` loop
-will stop and the program will exit. Any characters after the `q` will be left
-unread on the input queue, and you may see that input being fed into your shell
-after your program exits.
+```
+  #include <unistd.h>
+  int main() {
+    char c;
++   while (read(STDIN_FILENO, &c, 1) == 1 && c != 'q');
+    return 0;
+  }
+```
 
-## Turn off echoing
+このプログラムを終了するには、`q`を含むテキストをタイプして<kbd>Enter</kbd>キーをタイプする必要があります。
+プログラムは`q`を読み込むまで一行を一度に素早く一文字ずつ読み込みます。
+`q`に達した時点で、`while`ループは止まり、プログラムは終了します。
+`q`の後の文字は入力キューに残され、プログラムが終了した後、入力がshellに流れるのを確認できるでしょう。
 
-We can set a terminal's attributes by (1) using `tcgetattr()` to read the
-current attributes into a struct, (2) modifying the struct by hand, and
-(3) passing the modified struct to `tcsetattr()` to write the new terminal
-attributes back out. Let's try turning off the `ECHO` feature this way.
+## echoを止める
 
-{{echo}}
+ターミナルの属性を次のようにして設定できます。
+(1) `tcgetattr()`を利用して、現在の属性を構造体に取得する
+(2) 構造体を変更する
+(3) `tcsetattr()`に変更した構造体を渡すことで、新しいターミナル属性を書き込む
+この方法で`ECHO`機能を無効化してみましょう。
 
-`struct termios`, `tcgetattr()`, `tcsetattr()`, `ECHO`, and `TCSAFLUSH` all
-come from `<termios.h>`.
+```c
++ #include <termios.h>
+  #include <unistd.h>
+  
++ void enableRawMode() {
++   struct termios raw;
++   tcgetattr(STDIN_FILENO, &raw);
++   raw.c_lflag &= ~(ECHO);
++   tcsetattr(STDIN_FILENO, TCSAFLUSH, &raw);
++ }
 
-The `ECHO` feature causes each key you type to be printed to the terminal, so
-you can see what you're typing. This is useful in canonical mode, but really
-gets in the way when we are trying to carefully render a user interface in raw
-mode. So we turn it off. This program does the same thing as the one in the
-previous step, it just doesn't print what you are typing. You may be familiar
-with this mode if you've ever had to type a password at the terminal, when
-using `sudo` for example.
+  int main() {
++   enableRawMode();
+    
+    char c;
+    while (read(STDIN_FILENO, &c, 1) == 1 && c != 'q');
+    return 0;
+}
+```
 
-After the program quits, depending on your shell, you may find your terminal is
-still not echoing what you type. Don't worry, it will still listen to what you
-type. Just press <kbd>Ctrl-C</kbd> to start a fresh line of input to your
-shell, and type in `reset` and press <kbd>Enter</kbd>. This resets your
+`struct termios`、`tcgetattr()`、`tcsetattr()`、`ECHO`、`TCSAFLUSH`は`<termios.h>`から来ています。
+
+`ECHO`機能はタイプしたそれぞれのキーをターミナルに出力します。
+つまり、タイピングしたキーを確認することができます。
+これはカノニカルモードでは有用ですが、rawモードでユーザーインターフェイスをレンダリングしようとする際は非常に邪魔になります。
+なので、これを無効にします。
+このプログラムは、タイプしたキーを出力しないだけで、先のステップと同じ動作をします。
+このモードは`sudo`コマンドなど、ターミナルでパスワードを入力したことのある人には馴染みがあるかもしれません
+
+プログラムの終了ご、
+After the program quits, depending on your shell, you may find your terminal is still not echoing what you type. 
+Don't worry, it will still listen to what you
+type. Just press <kbd>Ctrl-C</kbd> to start a fresh line of input to your shell, and type in `reset` and press <kbd>Enter</kbd>.
+This resets your
 terminal back to normal in most cases. Failing that, you can always restart
 your terminal emulator. We'll fix this whole problem in the next step.
 
