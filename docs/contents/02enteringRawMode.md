@@ -87,7 +87,8 @@ Raw モードにはターミナルの非常に多くのフラグをへし折る�
 このプログラムは、タイプしたキーを出力しないだけで、先のステップと同じ動作をします。
 このモードは`sudo`コマンドなど、ターミナルでパスワードを入力したことのある人には馴染みがあるかもしれません
 
-プログラムの終了ご、
+プログラムの終了後、シェルによってはあなたの入力を表示しないことがあることに気づくかもしれません。
+ですが心配しないでください。シェルはきちんと入力を受け付けています。
 After the program quits, depending on your shell, you may find your terminal is still not echoing what you type. 
 Don't worry, it will still listen to what you
 type. Just press <kbd>Ctrl-C</kbd> to start a fresh line of input to your shell, and type in `reset` and press <kbd>Enter</kbd>.
