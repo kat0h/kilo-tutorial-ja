@@ -1,0 +1,1014 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.3">
+    
+    
+      
+        <title>Rawモードに入る - Kilo tutorial</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.5143246d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#raw" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../.." title="Kilo tutorial" class="md-header__button md-logo" aria-label="Kilo tutorial" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kilo tutorial
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Rawモードに入る
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="クリア" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Kilo tutorial" class="md-nav__button md-logo" aria-label="Kilo tutorial" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Kilo tutorial
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        自分自身のテキストエディターを作ろう
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Contents
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Contents" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01setup/" class="md-nav__link">
+        セットアップ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Rawモードに入る
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Rawモードに入る
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#q" class="md-nav__link">
+    qをタイプして終了
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#echo" class="md-nav__link">
+    echoを止める
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disable-raw-mode-at-exit" class="md-nav__link">
+    Disable raw mode at exit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#turn-off-canonical-mode" class="md-nav__link">
+    Turn off canonical mode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#display-keypresses" class="md-nav__link">
+    Display keypresses
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#turn-off-ctrl-c-and-ctrl-z-signals" class="md-nav__link">
+    Turn off Ctrl-C and Ctrl-Z signals
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disable-ctrl-s-and-ctrl-q" class="md-nav__link">
+    Disable Ctrl-S and Ctrl-Q
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disable-ctrl-v" class="md-nav__link">
+    Disable Ctrl-V
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fix-ctrl-m" class="md-nav__link">
+    Fix Ctrl-M
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#turn-off-all-output-processing" class="md-nav__link">
+    Turn off all output processing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#miscellaneous-flags" class="md-nav__link">
+    Miscellaneous flags
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-timeout-for-read" class="md-nav__link">
+    A timeout for read()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    Error handling
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sections" class="md-nav__link">
+    Sections
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03rawInputAndOutput/" class="md-nav__link">
+        Raw input and output
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04aTextViewer/" class="md-nav__link">
+        A text viewer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05aTextEditor/" class="md-nav__link">
+        A text editor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06search/" class="md-nav__link">
+        Search
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07syntaxHighlighting/" class="md-nav__link">
+        Syntax highlighting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08appendices/" class="md-nav__link">
+        Appendices
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#q" class="md-nav__link">
+    qをタイプして終了
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#echo" class="md-nav__link">
+    echoを止める
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disable-raw-mode-at-exit" class="md-nav__link">
+    Disable raw mode at exit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#turn-off-canonical-mode" class="md-nav__link">
+    Turn off canonical mode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#display-keypresses" class="md-nav__link">
+    Display keypresses
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#turn-off-ctrl-c-and-ctrl-z-signals" class="md-nav__link">
+    Turn off Ctrl-C and Ctrl-Z signals
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disable-ctrl-s-and-ctrl-q" class="md-nav__link">
+    Disable Ctrl-S and Ctrl-Q
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disable-ctrl-v" class="md-nav__link">
+    Disable Ctrl-V
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fix-ctrl-m" class="md-nav__link">
+    Fix Ctrl-M
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#turn-off-all-output-processing" class="md-nav__link">
+    Turn off all output processing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#miscellaneous-flags" class="md-nav__link">
+    Miscellaneous flags
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-timeout-for-read" class="md-nav__link">
+    A timeout for read()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    Error handling
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sections" class="md-nav__link">
+    Sections
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="raw">Rawモードに入る</h1>
+<p>ユーザーからのキー入力を読み取ってみましょう。</p>
+<div class="codehilite"><pre><span></span><code><span class="o">+</span><span class="w"> </span><span class="err">#</span><span class="n">include</span><span class="w"> </span><span class="o">&lt;</span><span class="n">unistd</span><span class="p">.</span><span class="n">h</span><span class="o">&gt;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="o">+</span><span class="w">  </span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w"></span>
+<span class="o">+</span><span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">read</span><span class="p">(</span><span class="n">STDIN_FILENO</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+
+<p><code>read()</code>と<code>STDIN_FILENO</code>は<code>&lt;unistd.h&gt;</code>から来ています。
+これは、読み込むデータが無くなるまで<code>read()</code>に標準入力から1byte読み込み、変数<code>c</code>に設定するよう命令しています。
+<code>read()</code>は読み込んだbyte数を返し、ファイルの終端（End Of File）に達すると<code>0</code>を返します。</p>
+<p><code>./kilo</code>を実行したときターミナルは標準入力をフックし、あなたのキーボード入力を変数<code>c</code>に代入します。
+しかしながら、デフォルトではターミナルは<strong>canonicalモード</strong>（cookedモード）で開始します。
+このモードでは、ユーザーが<kbd>Enter</kbd>キーを押した時のみにキー入力がプログラムに送信されます。
+このモードは、ユーザーは入力中の間違いを確定するまで、<kbd>Backspace</kbd>で修正することがでるため、
+一行のテキストを入力させるプログラムで有用です。
+しかし、これはテキストエディターのような複雑なユーザーインターフェイスを持つプログラムではうまく機能しません。
+キー入力が来るたびに処理をしたいので、即座に反応する必要があります。</p>
+<p>私たちが欲しいのは<strong>Raw モード</strong>です。
+不幸なことに、ターミナルをRaw モードに設定するシンプルなスイッチは存在しません。
+Raw モードにはターミナルの非常に多くのフラグをへし折ることによって入ることができます。
+この章の過程を通して徐々に達成していきます。</p>
+<p>下記のプログラムを終了するには、<kbd>Ctrl-D</kbd>をタイプして<code>read()</code>にファイルの終端に達したことを伝えてください。
+また、<kbd>Ctrl-C</kbd>をタイプしてプロセスに終了シグナルを送ることもできます。</p>
+<h2 id="q"><kbd>q</kbd>をタイプして終了</h2>
+<p>カノニカルモードがどのように機能するか示すために、ユーザーから<kbd>q</kbd>を受けとった時にプログラムを終了するようにしましょう。</p>
+<div class="codehilite"><pre><span></span><code><span class="w">  </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;unistd.h&gt;</span><span class="cp"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w"></span>
+<span class="o">+</span><span class="w">   </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">read</span><span class="p">(</span><span class="n">STDIN_FILENO</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="sc">&#39;q&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+
+<p>このプログラムを終了するには、<code>q</code>を含むテキストをタイプして<kbd>Enter</kbd>キーをタイプする必要があります。
+プログラムは<code>q</code>を読み込むまで一行を一度に素早く一文字ずつ読み込みます。
+<code>q</code>に達した時点で、<code>while</code>ループは止まり、プログラムは終了します。
+<code>q</code>の後の文字は入力キューに残され、プログラムが終了した後、入力がshellに流れるのを確認できるでしょう。</p>
+<h2 id="echo">echoを止める</h2>
+<p>ターミナルの属性を次のようにして設定できます。
+(1) <code>tcgetattr()</code>を利用して、現在の属性を構造体に取得する
+(2) 構造体を変更する
+(3) <code>tcsetattr()</code>に変更した構造体を渡すことで、新しいターミナル属性を書き込む
+この方法で<code>ECHO</code>機能を無効化してみましょう。</p>
+<div class="codehilite"><pre><span></span><code><span class="o">+</span><span class="w"> </span><span class="err">#</span><span class="n">include</span><span class="w"> </span><span class="o">&lt;</span><span class="n">termios</span><span class="p">.</span><span class="n">h</span><span class="o">&gt;</span><span class="w"></span>
+<span class="w">  </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;unistd.h&gt;</span><span class="cp"></span>
+
+<span class="o">+</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">enableRawMode</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="o">+</span><span class="w">   </span><span class="k">struct</span> <span class="nc">termios</span><span class="w"> </span><span class="n">raw</span><span class="p">;</span><span class="w"></span>
+<span class="o">+</span><span class="w">   </span><span class="n">tcgetattr</span><span class="p">(</span><span class="n">STDIN_FILENO</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">raw</span><span class="p">);</span><span class="w"></span>
+<span class="o">+</span><span class="w">   </span><span class="n">raw</span><span class="p">.</span><span class="n">c_lflag</span><span class="w"> </span><span class="o">&amp;=</span><span class="w"> </span><span class="o">~</span><span class="p">(</span><span class="n">ECHO</span><span class="p">);</span><span class="w"></span>
+<span class="o">+</span><span class="w">   </span><span class="n">tcsetattr</span><span class="p">(</span><span class="n">STDIN_FILENO</span><span class="p">,</span><span class="w"> </span><span class="n">TCSAFLUSH</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">raw</span><span class="p">);</span><span class="w"></span>
+<span class="o">+</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="o">+</span><span class="w">   </span><span class="n">enableRawMode</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">read</span><span class="p">(</span><span class="n">STDIN_FILENO</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="sc">&#39;q&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+
+<p><code>struct termios</code>、<code>tcgetattr()</code>、<code>tcsetattr()</code>、<code>ECHO</code>、<code>TCSAFLUSH</code>は<code>&lt;termios.h&gt;</code>から来ています。</p>
+<p><code>ECHO</code>機能はタイプしたそれぞれのキーをターミナルに出力します。
+つまり、タイピングしたキーを確認することができます。
+これはカノニカルモードでは有用ですが、rawモードでユーザーインターフェイスをレンダリングしようとする際は非常に邪魔になります。
+なので、これを無効にします。
+このプログラムは、タイプしたキーを出力しないだけで、先のステップと同じ動作をします。
+このモードは<code>sudo</code>コマンドなど、ターミナルでパスワードを入力したことのある人には馴染みがあるかもしれません</p>
+<p>プログラムの終了後、シェルによってはあなたの入力を表示しないことがあることに気づくかもしれません。
+ですが心配しないでください。シェルはきちんと入力を受け付けています。
+After the program quits, depending on your shell, you may find your terminal is still not echoing what you type. 
+Don't worry, it will still listen to what you
+type. Just press <kbd>Ctrl-C</kbd> to start a fresh line of input to your shell, and type in <code>reset</code> and press <kbd>Enter</kbd>.
+This resets your
+terminal back to normal in most cases. Failing that, you can always restart
+your terminal emulator. We'll fix this whole problem in the next step.</p>
+<p>Terminal attributes can be read into a <code>termios</code> struct by <code>tcgetattr()</code>. After
+modifying them, you can then apply them to the terminal using <code>tcsetattr()</code>.
+The <code>TCSAFLUSH</code> argument specifies when to apply the change: in this case, it
+waits for all pending output to be written to the terminal, and also discards
+any input that hasn't been read.</p>
+<p>The <code>c_lflag</code> field is for "local flags". A comment in macOS's <code>&lt;termios.h&gt;</code>
+describes it as a "dumping ground for other state". So perhaps it should be
+thought of as "miscellaneous flags". The other flag fields are <code>c_iflag</code> (input
+flags), <code>c_oflag</code> (output flags), and <code>c_cflag</code> (control flags), all of which
+we will have to modify to enable raw mode.</p>
+<p><code>ECHO</code> is a <a href="https://en.wikipedia.org/wiki/Bit_field">bitflag</a>, defined as
+<code>00000000000000000000000000001000</code> in binary. We use the bitwise-NOT operator
+(<code>~</code>) on this value to get <code>11111111111111111111111111110111</code>. We then
+bitwise-AND this value with the flags field, which forces the fourth bit in the
+flags field to become <code>0</code>, and causes every other bit to retain its current
+value. Flipping bits like this is common in C.</p>
+<h2 id="disable-raw-mode-at-exit">Disable raw mode at exit</h2>
+<p>Let's be nice to the user and restore their terminal's original attributes when
+our program exits. We'll save a copy of the <code>termios</code> struct in its original
+state, and use <code>tcsetattr()</code> to apply it to the terminal when the program
+exits.</p>
+<p>{{atexit}}</p>
+<p><code>atexit()</code> comes from <code>&lt;stdlib.h&gt;</code>. We use it to register our
+<code>disableRawMode()</code> function to be called automatically when the program exits,
+whether it exits by returning from <code>main()</code>, or by calling the <code>exit()</code>
+function. This way we can ensure we'll leave the terminal attributes the way
+we found them when our program exits.</p>
+<p>We store the original terminal attributes in a global variable, <code>orig_termios</code>.
+We assign the <code>orig_termios</code> struct to the <code>raw</code> struct in order to make a copy
+of it before we start making our changes.</p>
+<p>You may notice that leftover input is no longer fed into your shell after the
+program quits. This is because of the <code>TCSAFLUSH</code> option being passed to
+<code>tcsetattr()</code> when the program exits. As described earlier, it discards any
+unread input before applying the changes to the terminal. (Note: This doesn't
+happen in Cygwin for some reason, but it won't matter once we are reading input
+one byte at a time.)</p>
+<h2 id="turn-off-canonical-mode">Turn off canonical mode</h2>
+<p>There is an <code>ICANON</code> flag that allows us to turn off canonical mode. This means
+we will finally be reading input byte-by-byte, instead of line-by-line.</p>
+<p>{{icanon}}</p>
+<p><code>ICANON</code> comes from <code>&lt;termios.h&gt;</code>. Input flags (the ones in the <code>c_iflag</code>
+field) generally start with <code>I</code> like <code>ICANON</code> does. However, <code>ICANON</code> is not an
+input flag, it's a "local" flag in the <code>c_lflag</code> field. So that's confusing.</p>
+<p>Now the program will quit as soon as you press <kbd>q</kbd>.</p>
+<h2 id="display-keypresses">Display keypresses</h2>
+<p>To get a better idea of how input in raw mode works, let's print out each byte
+that we <code>read()</code>. We'll print each character's numeric ASCII value, as well as
+the character it represents if it is a printable character.</p>
+<p>{{keypresses}}</p>
+<p><code>iscntrl()</code> comes from <code>&lt;ctype.h&gt;</code>, and <code>printf()</code> comes from <code>&lt;stdio.h&gt;</code>.</p>
+<p><code>iscntrl()</code> tests whether a character is a control character. Control
+characters are nonprintable characters that we don't want to print to the
+screen. ASCII codes 0&ndash;31 are all control characters, and 127 is also a
+control character. ASCII codes 32&ndash;126 are all printable. (Check out the
+<a href="http://asciitable.com">ASCII table</a> to see all of the characters.)</p>
+<p><code>printf()</code> can print multiple representations of a byte. <code>%d</code> tells it to
+format the byte as a decimal number (its ASCII code), and <code>%c</code> tells it to
+write out the byte directly, as a character.</p>
+<p>This is a very useful program. It shows us how various keypresses translate
+into the bytes we read. Most ordinary keys translate directly into the
+characters they represent. But try seeing what happens when you press the arrow
+keys, or <kbd>Escape</kbd>, or <kbd>Page Up</kbd>, or <kbd>Page Down</kbd>, or
+<kbd>Home</kbd>, or <kbd>End</kbd>, or <kbd>Backspace</kbd>, or
+<kbd>Delete</kbd>, or <kbd>Enter</kbd>. Try key combinations with
+<kbd>Ctrl</kbd>, like <kbd>Ctrl-A</kbd>, <kbd>Ctrl-B</kbd>, etc.</p>
+<p>You'll notice a few interesting things:</p>
+<ul>
+<li>Arrow keys, <kbd>Page Up</kbd>, <kbd>Page Down</kbd>, <kbd>Home</kbd>, and
+  <kbd>End</kbd> all input 3 or 4 bytes to the terminal: <code>27</code>, <code>'['</code>, and then
+  one or two other characters. This is known as an <em>escape sequence</em>. All
+  escape sequences start with a <code>27</code> byte. Pressing <kbd>Escape</kbd> sends a
+  single <code>27</code> byte as input.</li>
+<li><kbd>Backspace</kbd> is byte <code>127</code>. <kbd>Delete</kbd> is a 4-byte escape
+  sequence.</li>
+<li><kbd>Enter</kbd> is byte <code>10</code>, which is a newline character, also known as
+  <code>'\n'</code>.</li>
+<li><kbd>Ctrl-A</kbd> is <code>1</code>, <kbd>Ctrl-B</kbd> is <code>2</code>, <kbd>Ctrl-C</kbd> is...
+  oh, that terminates the program, right. But the <kbd>Ctrl</kbd> key
+  combinations that do work seem to map the letters A&ndash;Z to the codes
+  1&ndash;26.</li>
+</ul>
+<p>By the way, if you happen to press <kbd>Ctrl-S</kbd>, you may find your program
+seems to be frozen. What you've done is you've asked your program to <a href="https://en.wikipedia.org/wiki/Software_flow_control">stop
+sending you output</a>. Press
+<kbd>Ctrl-Q</kbd> to tell it to resume sending you output.</p>
+<p>Also, if you press <kbd>Ctrl-Z</kbd> (or maybe <kbd>Ctrl-Y</kbd>), your program
+will be suspended to the background. Run the <code>fg</code> command to bring it back to
+the foreground. (It may quit immediately after you do that, as a result of
+<code>read()</code> returning <code>-1</code> to indicate that an error occurred. This happens on
+macOS, while Linux seems to be able to resume the <code>read()</code> call properly.)</p>
+<h2 id="turn-off-ctrl-c-and-ctrl-z-signals">Turn off <kbd>Ctrl-C</kbd> and <kbd>Ctrl-Z</kbd> signals</h2>
+<p>By default, <kbd>Ctrl-C</kbd> sends a <code>SIGINT</code> signal to the current process
+which causes it to terminate, and <kbd>Ctrl-Z</kbd> sends a <code>SIGTSTP</code> signal to
+the current process which causes it to suspend. Let's turn off the sending of
+both of these signals.</p>
+<p>{{isig}}</p>
+<p><code>ISIG</code> comes from <code>&lt;termios.h&gt;</code>. Like <code>ICANON</code>, it starts with <code>I</code> but isn't an
+input flag.</p>
+<p>Now <kbd>Ctrl-C</kbd> can be read as a <code>3</code> byte and <kbd>Ctrl-Z</kbd> can be
+read as a <code>26</code> byte.</p>
+<p>This also disables <kbd>Ctrl-Y</kbd> on macOS, which is like <kbd>Ctrl-Z</kbd>
+except it waits for the program to read input before suspending it.</p>
+<h2 id="disable-ctrl-s-and-ctrl-q">Disable <kbd>Ctrl-S</kbd> and <kbd>Ctrl-Q</kbd></h2>
+<p>By default, <kbd>Ctrl-S</kbd> and <kbd>Ctrl-Q</kbd> are used for
+<a href="https://en.wikipedia.org/wiki/Software_flow_control">software flow control</a>.
+<kbd>Ctrl-S</kbd> stops data from being transmitted to the terminal until you
+press <kbd>Ctrl-Q</kbd>. This originates in the days when you might want to
+pause the transmission of data to let a device like a printer catch up. Let's
+just turn off that feature.</p>
+<p>{{ixon}}</p>
+<p><code>IXON</code> comes from <code>&lt;termios.h&gt;</code>. The <code>I</code> stands for "input flag" (which it is,
+unlike the other <code>I</code> flags we've seen so far) and <code>XON</code> comes from the names of
+the two control characters that <kbd>Ctrl-S</kbd> and <kbd>Ctrl-Q</kbd>
+produce: <code>XOFF</code> to pause transmission and <code>XON</code> to resume transmission.</p>
+<p>Now <kbd>Ctrl-S</kbd> can be read as a <code>19</code> byte and <kbd>Ctrl-Q</kbd> can be
+read as a <code>17</code> byte.</p>
+<h2 id="disable-ctrl-v">Disable <kbd>Ctrl-V</kbd></h2>
+<p>On some systems, when you type <kbd>Ctrl-V</kbd>, the terminal waits for you to
+type another character and then sends that character literally. For example,
+before we disabled <kbd>Ctrl-C</kbd>, you might've been able to type
+<kbd>Ctrl-V</kbd> and then <kbd>Ctrl-C</kbd> to input a <code>3</code> byte. We can turn
+off this feature using the <code>IEXTEN</code> flag.</p>
+<p>Turning off <code>IEXTEN</code> also fixes <kbd>Ctrl-O</kbd> in macOS, whose terminal
+driver is otherwise set to discard that control character.</p>
+<p>{{iexten}}</p>
+<p><code>IEXTEN</code> comes from <code>&lt;termios.h&gt;</code>. It is another flag that starts with <code>I</code> but
+belongs in the <code>c_lflag</code> field.</p>
+<p><kbd>Ctrl-V</kbd> can now be read as a <code>22</code> byte, and <kbd>Ctrl-O</kbd> as a
+<code>15</code> byte.</p>
+<h2 id="fix-ctrl-m">Fix <kbd>Ctrl-M</kbd></h2>
+<p>If you run the program now and go through the whole alphabet while holding down
+<kbd>Ctrl</kbd>, you should see that we have every letter except <kbd>M</kbd>.
+<kbd>Ctrl-M</kbd> is weird: it's being read as <code>10</code>, when we expect it to be
+read as <code>13</code>, since it is the 13th letter of the alphabet, and
+<kbd>Ctrl-J</kbd> already produces a <code>10</code>. What else produces <code>10</code>? The
+<kbd>Enter</kbd> key does.</p>
+<p>It turns out that the terminal is helpfully translating any carriage returns
+(<code>13</code>, <code>'\r'</code>) inputted by the user into newlines (<code>10</code>, <code>'\n'</code>). Let's turn
+off this feature.</p>
+<p>{{icrnl}}</p>
+<p><code>ICRNL</code> comes from <code>&lt;termios.h&gt;</code>. The <code>I</code> stands for "input flag", <code>CR</code> stands
+for "carriage return", and <code>NL</code> stands for "new line".</p>
+<p>Now <kbd>Ctrl-M</kbd> is read as a <code>13</code> (carriage return), and the
+<kbd>Enter</kbd> key is also read as a <code>13</code>.</p>
+<h2 id="turn-off-all-output-processing">Turn off all output processing</h2>
+<p>It turns out that the terminal does a similar translation on the output side.
+It translates each newline (<code>"\n"</code>) we print into a carriage return followed by
+a newline (<code>"\r\n"</code>). The terminal requires both of these characters in order
+to start a new line of text. The carriage return moves the cursor back to the
+beginning of the current line, and the newline moves the cursor down a line,
+scrolling the screen if necessary. (These two distinct operations originated in
+the days of typewriters and
+<a href="https://en.wikipedia.org/wiki/Teleprinter">teletypes</a>.)</p>
+<p>We will turn off all output processing features by turning off the <code>OPOST</code>
+flag. In practice, the <code>"\n"</code> to <code>"\r\n"</code> translation is likely the only output
+processing feature turned on by default.</p>
+<p>{{opost}}</p>
+<p><code>OPOST</code> comes from <code>&lt;termios.h&gt;</code>. <code>O</code> means it's an output flag, and I assume
+<code>POST</code> stands for "post-processing of output".</p>
+<p>If you run the program now, you'll see that the newline characters we're
+printing are only moving the cursor down, and not to the left side of the
+screen. To fix that, let's add carriage returns to our <code>printf()</code> statements.</p>
+<p>{{carriage-returns}}</p>
+<p>From now on, we'll have to write out the full <code>"\r\n"</code> whenever we want
+to start a new line.</p>
+<h2 id="miscellaneous-flags">Miscellaneous flags</h2>
+<p>Let's turn off a few more flags.</p>
+<p>{{misc-flags}}</p>
+<p><code>BRKINT</code>, <code>INPCK</code>, <code>ISTRIP</code>, and <code>CS8</code> all come from <code>&lt;termios.h&gt;</code>.</p>
+<p>This step probably won't have any observable effect for you, because these
+flags are either already turned off, or they don't really apply to modern
+terminal emulators. But at one time or another, switching them off was
+considered (by someone) to be part of enabling "raw mode", so we carry on the
+tradition (of whoever that someone was) in our program.</p>
+<p>As far as I can tell:</p>
+<ul>
+<li>When <code>BRKINT</code> is turned on, a
+  <a href="https://www.cmrr.umn.edu/~strupp/serial.html#2_3_3">break condition</a> will
+  cause a <code>SIGINT</code> signal to be sent to the program, like pressing <code>Ctrl-C</code>.</li>
+<li><code>INPCK</code> enables parity checking, which doesn't seem to apply to modern
+  terminal emulators.</li>
+<li><code>ISTRIP</code> causes the 8th bit of each input byte to be stripped, meaning it
+  will set it to <code>0</code>. This is probably already turned off.</li>
+<li><code>CS8</code> is not a flag, it is a bit mask with multiple bits, which we set using
+  the bitwise-OR (<code>|</code>) operator unlike all the flags we are turning off. It
+  sets the character size (CS) to 8 bits per byte. On my system, it's already
+  set that way.</li>
+</ul>
+<h2 id="a-timeout-for-read">A timeout for <code>read()</code></h2>
+<p>Currently, <code>read()</code> will wait indefinitely for input from the keyboard before
+it returns. What if we want to do something like animate something on the
+screen while waiting for user input? We can set a timeout, so that <code>read()</code>
+returns if it doesn't get any input for a certain amount of time.</p>
+<p>{{vmin-vtime}}</p>
+<p><code>VMIN</code> and <code>VTIME</code> come from <code>&lt;termios.h&gt;</code>. They are indexes into the <code>c_cc</code>
+field, which stands for "control characters", an array of bytes that control
+various terminal settings.</p>
+<p>The <code>VMIN</code> value sets the minimum number of bytes of input needed before
+<code>read()</code> can return. We set it to <code>0</code> so that <code>read()</code> returns as soon as there
+is any input to be read. The <code>VTIME</code> value sets the maximum amount of time to
+wait before <code>read()</code> returns. It is in tenths of a second, so we set it to 1/10
+of a second, or 100 milliseconds. If <code>read()</code> times out, it will return <code>0</code>,
+which makes sense because its usual return value is the number of bytes read.</p>
+<p>When you run the program, you can see how often <code>read()</code> times out. If you
+don't supply any input, <code>read()</code> returns without setting the <code>c</code> variable,
+which retains its <code>0</code> value and so you see <code>0</code>s getting printed out. If you
+type really fast, you can see that <code>read()</code> returns right away after each
+keypress, so it's not like you can only read one keypress every tenth of a
+second.</p>
+<p>If you're using <strong>Bash on Windows</strong>, you may see that <code>read()</code> still blocks for
+input. It doesn't seem to care about the <code>VTIME</code> value. Fortunately, this won't
+make too big a difference in our text editor, as we'll be basically blocking
+for input anyways.</p>
+<h2 id="error-handling">Error handling</h2>
+<p><code>enableRawMode()</code> now gets us fully into raw mode. It's time to clean up the
+code by adding some error handling.</p>
+<p>First, we'll add a <code>die()</code> function that prints an error message and exits the
+program.</p>
+<p>{{die}}</p>
+<p><code>perror()</code> comes from <code>&lt;stdio.h&gt;</code>, and <code>exit()</code> comes from <code>&lt;stdlib.h&gt;</code>.</p>
+<p>Most C library functions that fail will set the global <code>errno</code> variable to
+indicate what the error was. <code>perror()</code> looks at the global <code>errno</code> variable
+and prints a descriptive error message for it. It also prints the string given
+to it before it prints the error message, which is meant to provide context
+about what part of your code caused the error.</p>
+<p>After printing out the error message, we exit the program with an exit status
+of <code>1</code>, which indicates failure (as would any non-zero value).</p>
+<p>Let's check each of our library calls for failure, and call <code>die()</code> when they
+fail.</p>
+<p>{{error-handling}}</p>
+<p><code>errno</code> and <code>EAGAIN</code> come from <code>&lt;errno.h&gt;</code>.</p>
+<p><code>tcsetattr()</code>, <code>tcgetattr()</code>, and <code>read()</code> all return <code>-1</code> on failure, and set
+the <code>errno</code> value to indicate the error.</p>
+<p>In Cygwin, when <code>read()</code> times out it returns <code>-1</code> with an <code>errno</code> of <code>EAGAIN</code>,
+instead of just returning <code>0</code> like it's supposed to. To make it work in Cygwin,
+we won't treat <code>EAGAIN</code> as an error.</p>
+<p>An easy way to make <code>tcgetattr()</code> fail is to give your program a text file or a
+pipe as the standard input instead of your terminal. To give it a file as
+standard input, run <code>./kilo &lt;kilo.c</code>. To give it a pipe, run
+<code>echo test | ./kilo</code>. Both should result in the same error from <code>tcgetattr()</code>,
+something like <code>Inappropriate ioctl for device</code>.</p>
+<h2 id="sections">Sections</h2>
+<p>That just about concludes this chapter on entering raw mode. The last thing
+we'll do now is split our code into sections. This will allow these diffs to be
+shorter, as each section that isn't changed in a diff will be folded into a
+single line.</p>
+<p>{{sections}}</p>
+<p>In the <a href="03.rawInputAndOutput.html">next chapter</a>, we'll do some more low-level
+terminal input/output handling, and use that to draw to the screen and allow
+the user to move the cursor around.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="フッター">
+      
+        
+        <a href="../01setup/" class="md-footer__link md-footer__link--prev" aria-label="前: セットアップ" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                前
+              </span>
+              セットアップ
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../03rawInputAndOutput/" class="md-footer__link md-footer__link--next" aria-label="次: Raw input and output" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                次
+              </span>
+              Raw input and output
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f89c2efe.min.js"></script>
+      
+    
+  </body>
+</html>

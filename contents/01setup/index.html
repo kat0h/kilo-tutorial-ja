@@ -1,0 +1,680 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.3">
+    
+    
+      
+        <title>セットアップ - Kilo tutorial</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.5143246d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../.." title="Kilo tutorial" class="md-header__button md-logo" aria-label="Kilo tutorial" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kilo tutorial
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              セットアップ
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="クリア" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Kilo tutorial" class="md-nav__button md-logo" aria-label="Kilo tutorial" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Kilo tutorial
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        自分自身のテキストエディターを作ろう
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Contents
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Contents" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          セットアップ
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        セットアップ
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    Cコンパイラのインストール
+  </a>
+  
+    <nav class="md-nav" aria-label="Cコンパイラのインストール">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    ...Windowsで
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos" class="md-nav__link">
+    ...macOSで
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    ...Linuxで
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main" class="md-nav__link">
+    main()関数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#make" class="md-nav__link">
+    makeを利用したコンパイル
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02enteringRawMode/" class="md-nav__link">
+        Rawモードに入る
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03rawInputAndOutput/" class="md-nav__link">
+        Raw input and output
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04aTextViewer/" class="md-nav__link">
+        A text viewer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05aTextEditor/" class="md-nav__link">
+        A text editor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06search/" class="md-nav__link">
+        Search
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07syntaxHighlighting/" class="md-nav__link">
+        Syntax highlighting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08appendices/" class="md-nav__link">
+        Appendices
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    Cコンパイラのインストール
+  </a>
+  
+    <nav class="md-nav" aria-label="Cコンパイラのインストール">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    ...Windowsで
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos" class="md-nav__link">
+    ...macOSで
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    ...Linuxで
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main" class="md-nav__link">
+    main()関数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#make" class="md-nav__link">
+    makeを利用したコンパイル
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="_1">セットアップ</h1>
+<p><img alt="assets/lego-step-one.png" src="../assets/lego-step-one.png" /></p>
+<p>あー、ステップ1。
+空っぽのプレートからの新鮮なスタートは好きでないですか？
+これから建築するあなた自身の広大な宮殿に載せる1つのブロックを選ぶことは？</p>
+<p>残念ながら、あなたが<strong>コンピュータプログラム</strong>を作成するとき、ステップ1は避けられません…
+複雑で、イライラしますが、あなたは利用するプログラミング言語の環境が構築されていることを確認してコンパイルして実行する方法を見つけ出す必要があります。</p>
+<p>幸運なことに、これから作るプログラムは外部のライブラリに依存していないので、Cコンパイラと付属する標準ライブラリを超えるものは必要ありません。
+（<code>make</code>プログラムは利用します）</p>
+<p>Cコンパイラがインストールされているか確認するために、<code>cc --version</code>をコマンドラインで実行してみてください（<code>cc</code>は"C Compiler"を意味します）。
+また、<code>make</code>がインストールされているか確認するために<code>make -v</code>も実行してください。</p>
+<h2 id="c">Cコンパイラのインストール</h2>
+<h3 id="windows">...Windowsで</h3>
+<p>あなたは<strong>何らかのWindows内Linux環境をインストールする必要</strong>があります。
+これは、テキストエディターが<code>&lt;termios.h&gt;</code>ヘッダファイル（Windowsで機能しない）を利用して低レベルでターミナルと対話するためです。</p>
+<p><a href="https://msdn.microsoft.com/en-us/commandline/wsl/about">Bash on Windows (WSL)</a> か
+<a href="https://www.cygwin.com/">Cygwin</a>、
+どちらかの利用を推奨します。</p>
+<p><strong>Bash on Windows (WSL)</strong>: 64bitのWindows 10でのみ動作します。
+<a href="https://msdn.microsoft.com/en-us/commandline/wsl/install_guide">インストールガイド</a>を参照してください。</p>
+<p>インストール後、Linux環境を起動する際は<code>bash</code>を実行してください。
+GNUコンパイラコレクションと<code>make</code>をインストールするために、<code>bash</code>内で<code>sudo apt-get install gcc make</code>を実行してください。
+もし<code>sudo</code>に長い時間がかかる際は、<a href="https://superuser.com/questions/1108197">/etc/hosts ファイルを修正する</a>必要があるかもしれません。</p>
+<p><strong>Cygwin</strong>: インストーラーを<a href="https://cygwin.com/install.html">cygwin.com/install.html</a>からダウンロードしてください。
+インストラクターがインストールするパッケージの選択を求めた際は、<code>devel</code>カテゴリを選択して、<code>gcc-core</code>と<code>make</code>パッケージを選択してください。</p>
+<p>Cygwinを使うには、Cygwinターミナルを実行する必要があります。
+Bash on Windows (WSL)とは異なりCygwinではホームディレクトリはWindowsのそれとは分離されています。
+もしあなたがCygwinを<code>C:\cygwin64</code>にインストールしたならば、ホームディレクトリは<code>C:\cygwin64\home\yourname</code>に配置されます。
+ですからコードを書くために、Cygwinの外でテキストエディターを使いたい際は、ここが保存場所になります。</p>
+<h3 id="macos">...macOSで</h3>
+<p><code>cc</code>コマンドを実行しようとした時、ウィンドウが開きコマンドラインツールをインストールするか聞かれるでしょう。
+また、<code>xcode-select --install</code>コマンドでもこのウィンドウを開くことができます。
+"Install"をクリックすると、Cコンパイラと<code>make</code>がインストールされます。</p>
+<h3 id="linux">...Linuxで</h3>
+<p>Ubuntuでは、<code>sudo apt-get install gcc make</code>でCコンパイラと<code>make</code>をインストールできます。
+他のディストリビューションでも同じように<code>gcc</code>と<code>make</code>を利用できます。</p>
+<h2 id="main"><code>main()</code>関数</h2>
+<p><code>kilo.c</code>と名前をつけた新しいファイルを作成し、<code>main()</code>関数を作成してください。
+（<code>kilo</code>は私たちが作っているテキストエディターの名前です）</p>
+<div class="codehilite"><pre><span></span><code><span class="nv">int</span> <span class="nv">main</span><span class="ss">()</span> {
+  <span class="k">return</span> <span class="mi">0</span><span class="c1">;</span>
+}
+</code></pre></div>
+
+<p>C言語（以下C）では、すべての実行可能コードを関数のなかに入れなくてはなりません。
+また<code>main()</code>関数は特別で、プログラムを実行する際のデフォルトの開始ポイントになります。
+<code>main()</code>関数の中で<code>return</code>を利用すると、プログラムはOSに整数を返して終了します。
+終了コード<code>0</code>は成功を示します。</p>
+<p>（訳註: Linuxにおいて終了コードは0~255の範囲に限られます）</p>
+<p>Cはコンパイル言語です。
+これは、プログラムを実行する際Cコンパイラを通して実行ファイルを生成する必要があるということです。
+そして、他のコマンドライン上のプログラムと同じように（生成した）ファイルを実行します。</p>
+<p><code>kilo.c</code>をコンパイルするには、<code>cc kilo.c -o kilo</code>をシェル内で実行します。
+エラーが発生しなければ、コンパイラは<code>kilo</code>と名付けられた実行ファイルを生成します。
+<code>-o</code>は"output"（出力）を意味し、出力ファイルが<code>kilo</code>と名付けられるように指示します。</p>
+<p><code>kilo</code>を実行するには、<code>./kilo</code>をシェル内でタイプし、<kbd>Enter</kbd> (しばしば <kbd>return</kbd>)を押します。
+プログラムは何も出力しませんが、<code>echo $?</code>を実行することで終了ステータス（<code>main()</code>関数の返り値）を確認できます。
+これにより、<code>0</code>が出力されるはずです。</p>
+<h2 id="make"><code>make</code>を利用したコンパイル</h2>
+<p>コンパイルし直したいとき、毎回<code>cc kilo.c -o kilo</code>とタイプするのは退屈です。
+<code>make</code>プログラムは、ただ<code>make</code>を実行するだけでプログラムをコンパイルすることを可能にします。
+あなたはただ、<code>Makefile</code>にプログラムをどうコンパイルするか書き込むだけです。</p>
+<p><code>Makefile</code>と名付けられた新しいファイルを作成し、下記のコードを書き込んでください。</p>
+<div class="codehilite"><pre><span></span><code><span class="nf">kilo</span><span class="o">:</span> <span class="n">kilo</span>.<span class="n">c</span>
+    <span class="k">$(</span>CC<span class="k">)</span> kilo.c -o kilo -Wall -Wextra -pedantic -std<span class="o">=</span>c99
+</code></pre></div>
+
+<p>初めの行の<code>kilo</code>はビルドしたいものの名前を示し、<code>kilo.c</code>がビルドに必要であることを<code>make</code>に伝えます。
+2行目では<code>kilo.c</code>から<code>kilo</code>を生成するためのコマンドを記述しています。
+字下げは<strong>真のtab文字を利用</strong>することに注意してください。空白文字ではありません。
+Cではどちらの文字でも字下げできますが、<code>Makefile</code>ではtab文字を使用する必要があります。</p>
+<p>コンパイルコマンドについてのいくつかの補足説明:</p>
+<ul>
+<li><code>$(CC)</code>は<code>make</code>によって<code>cc</code>に展開される変数です。</li>
+<li><code>-Wall</code>は"<strong>all</strong> <strong>W</strong>arnings"（すべての警告）を意味し、コンパイル可能なコードであっても、初期化前変数の利用などC言語にとって悪い書き方と考えられるものを警告します。</li>
+<li><code>-Wextra</code>と<code>-pedantic</code>は、更なる警告を有効にします。チュートリアルのそれぞれのステップでは「未使用の変数」以外の警告は出ないようになっています。何か警告を受け取ったらステップのコードと一致しているか確かめてください。</li>
+<li><code>-std=c99</code>はCのバージョンを指定します（<strong>st*an</strong>d**ard）。私たちが使う予定のバージョンは<a href="https://ja.wikipedia.org/wiki/C99">C99</a>です。C99では関数の中ではどこでも変数を宣言できます。（一方、<a href="https://ja.wikipedia.org/wiki/ANSI_C">AISI C</a>では変数の宣言を、関数かブロックの先頭で行う必要があります。）</li>
+</ul>
+<p>ついに<code>Makefile</code>を手に入れました。
+<code>make</code>を実行してプログラムをコンパイルしてみてください。</p>
+<p>おそらく<code>make: 'kilo' is up to date.</code>と出力されるでしょう。
+これは、現在のバージョンの<code>kilo.c</code>はそれぞれのファイルの最終変更タイムスタンプより後にコンパイルされていると判断されたためです。
+もし<code>kilo</code>が<code>kilo.c</code>より後に変更されている場合、<code>make</code>は<code>kilo.c</code>がすでにコンパイルされていると判断して再度のコンパイルを実行しません。
+反対に<code>kilo.c</code>が<code>kilo</code>より後に変更されている場合は、<code>make</code>は<code>kilo.c</code>を再度コンパイルします。
+これは、1つのファイルを変更してもすべてのファイルをコンパイルする必要のない、たくさんの（コンパイルする必要のある）コンポーネントを持つの大きなプロジェクトでとくに有効です。
+1つのコンポーネントだけを変更したときであれば、すべてのファイルをコンパイルし直さずに済むため、たくさんのコンポーネントを持つ大きなプロジェクトでとくに有効です。</p>
+<p><code>kilo.c</code>が返す値を<code>0</code>ではない数に変えてみてください。
+<code>make</code>を実行すると、再度コンパイルされるのを確認できるはずです。</p>
+<p><code>./kilo</code>を実行して、<code>echo $?</code>を確認してください。
+変更した値が返されているはずです。</p>
+<p>再度<code>0</code>を返すように変更し、再コンパイル。
+また<code>0</code>が返されることを確認してください。</p>
+<p>チュートリアルのステップを見た後、<code>kilo.c</code>を再コンパイル・エラーがないことを確認し、<code>./kilo</code>を実行してみてください。
+<code>./kilo</code>の再コンパイルを忘れ実行だけして、なぜ<code>kilo.c</code>への変更が<code>./kilo</code>に反映されていないのか悩むことはありがちです。
+<code>kilo.c</code>の変更を<code>./kilo</code>に反映させるには再コンパイルしなければなりません。</p>
+<p><a href="">次のチャプター</a>では、ターミナルを<em>raw mode</em>にして、ユーザからの入力を読み取るようにします。</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="フッター">
+      
+        
+        <a href="../.." class="md-footer__link md-footer__link--prev" aria-label="前: 自分自身のテキストエディターを作ろう" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                前
+              </span>
+              自分自身のテキストエディターを作ろう
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../02enteringRawMode/" class="md-footer__link md-footer__link--next" aria-label="次: Rawモードに入る" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                次
+              </span>
+              Rawモードに入る
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f89c2efe.min.js"></script>
+      
+    
+  </body>
+</html>

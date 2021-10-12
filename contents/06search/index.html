@@ -1,0 +1,640 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.3">
+    
+    
+      
+        <title>Search - Kilo tutorial</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.5143246d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#search" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../.." title="Kilo tutorial" class="md-header__button md-logo" aria-label="Kilo tutorial" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kilo tutorial
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Search
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="クリア" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Kilo tutorial" class="md-nav__button md-logo" aria-label="Kilo tutorial" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Kilo tutorial
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        自分自身のテキストエディターを作ろう
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Contents
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Contents" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01setup/" class="md-nav__link">
+        セットアップ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02enteringRawMode/" class="md-nav__link">
+        Rawモードに入る
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03rawInputAndOutput/" class="md-nav__link">
+        Raw input and output
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04aTextViewer/" class="md-nav__link">
+        A text viewer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05aTextEditor/" class="md-nav__link">
+        A text editor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Search
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Search
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#incremental-search" class="md-nav__link">
+    Incremental search
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restore-cursor-position-when-cancelling-search" class="md-nav__link">
+    Restore cursor position when cancelling search
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-forward-and-backward" class="md-nav__link">
+    Search forward and backward
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07syntaxHighlighting/" class="md-nav__link">
+        Syntax highlighting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08appendices/" class="md-nav__link">
+        Appendices
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#incremental-search" class="md-nav__link">
+    Incremental search
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restore-cursor-position-when-cancelling-search" class="md-nav__link">
+    Restore cursor position when cancelling search
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-forward-and-backward" class="md-nav__link">
+    Search forward and backward
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="search">Search</h1>
+<p>Let's use <code>editorPrompt()</code> to implement a minimal search feature. When the user
+types a search query and presses <kbd>Enter</kbd>, we'll loop through all the
+rows of the file, and if a row contains their query string, we'll move the
+cursor to the match.</p>
+<p>{{basic-search}}</p>
+<p><code>strstr()</code> comes from <code>&lt;string.h&gt;</code>.</p>
+<p>If they pressed <kbd>Escape</kbd> to cancel the input prompt, then
+<code>editorPrompt()</code> returns <code>NULL</code> and we abort the search.</p>
+<p>Otherwise, we loop through all the rows of the file. We use <code>strstr()</code> to check
+if <code>query</code> is a substring of the current row. It returns <code>NULL</code> if there is no
+match, otherwise it returns a pointer to the matching substring. To convert
+that into an index that we can set <code>E.cx</code> to, we subtract the <code>row-&gt;render</code>
+pointer from the <code>match</code> pointer, since <code>match</code> is a pointer into the
+<code>row-&gt;render</code> string. Lastly, we set <code>E.rowoff</code> so that we are scrolled to the
+very bottom of the file, which will cause <code>editorScroll()</code> to scroll upwards at
+the next screen refresh so that the matching line will be at the very top of
+the screen. This way, the user doesn't have to look all over their screen to
+find where their cursor jumped to, and where the matching line is.</p>
+<p>There's one problem here. Did you notice what we just did wrong? We assigned a
+<code>render</code> index to <code>E.cx</code>, but <code>E.cx</code> is an index into <code>chars</code>. If there are
+tabs to the left of the match, the cursor is going to be in the wrong position.
+We need to convert the <code>render</code> index into a <code>chars</code> index before assigning it
+to <code>E.cx</code>. Let's create an <code>editorRowRxToCx()</code> function, which is the opposite
+of the <code>editorRowCxToRx()</code> function we wrote in
+<a href="04.aTextViewer.html#tabs-and-the-cursor">chapter 4</a>, but contains a lot of the
+same code.</p>
+<p>{{rx-to-cx}}</p>
+<p>To convert an <code>rx</code> into a <code>cx</code>, we do pretty much the same thing when
+converting the other way: loop through the <code>chars</code> string, calculating the
+current <code>rx</code> value (<code>cur_rx</code>) as we go. But instead of stopping when we hit a
+particular <code>cx</code> value and returning <code>cur_rx</code>, we want to stop when <code>cur_rx</code>
+hits the given <code>rx</code> value and return <code>cx</code>.</p>
+<p>The <code>return</code> statement at the very end is just in case the caller provided an
+<code>rx</code> that's out of range, which shouldn't happen. The <code>return</code> statement inside
+the <code>for</code> loop should handle all <code>rx</code> values that are valid indexes into
+<code>render</code>.</p>
+<p>Now let's call <code>editorRowRxToCx()</code> to convert the matched index to a <code>chars</code>
+index and assign that to <code>E.cx</code>.</p>
+<p>{{use-rx-to-cx}}</p>
+<p>Finally, let's map <kbd>Ctrl-F</kbd> to the <code>editorFind()</code> function, and add it
+to the help message we set in <code>main()</code>.</p>
+<p>{{ctrl-f}}</p>
+<h2 id="incremental-search">Incremental search</h2>
+<p>Now, let's make our search feature fancy. We want to support incremental
+search, meaning the file is searched after each keypress when the user is
+typing in their search query.</p>
+<p>To implement this, we're going to get <code>editorPrompt()</code> to take a callback
+function as an argument. We'll have it call this function after each keypress,
+passing the current search query inputted by the user and the last key they
+pressed.</p>
+<p>{{prompt-callback}}</p>
+<p>The <code>if</code> statements allow the caller to pass <code>NULL</code> for the callback, in case
+they don't want to use a callback. This is the case when we prompt the user
+for a filename, so let's pass <code>NULL</code> to <code>editorPrompt()</code> when we do that. We'll
+also pass <code>NULL</code> to <code>editorPrompt()</code> in <code>editorFind()</code> for now, to get the code
+to compile.</p>
+<p>{{null-callback}}</p>
+<p>Now let's move the actual searching code from <code>editorFind()</code> into a function
+called <code>editorFindCallback()</code>. Obviously this will be our callback function for
+<code>editorPrompt()</code>.</p>
+<p>{{incremental-search}}</p>
+<p>In the callback, we check if the user pressed <kbd>Enter</kbd> or
+<kbd>Escape</kbd>, in which case they are leaving search mode so we <code>return</code>
+immediately instead of doing another search. Otherwise, after any other
+keypress, we do another search for the current <code>query</code> string.</p>
+<p>That's all there is to it. We now have incremental search.</p>
+<h2 id="restore-cursor-position-when-cancelling-search">Restore cursor position when cancelling search</h2>
+<p>When the user presses <kbd>Escape</kbd> to cancel a search, we want the cursor
+to go back to where it was when they started the search. To do that, we'll have
+to save their cursor position and scroll position, and restore those values
+after the search is cancelled.</p>
+<p>{{restore-cursor}}</p>
+<p>If <code>query</code> is <code>NULL</code>, that means they pressed <kbd>Escape</kbd>, so in that
+case we restore the values we saved.</p>
+<h2 id="search-forward-and-backward">Search forward and backward</h2>
+<p>The last feature we'd like to add is to allow the user to advance to the next
+or previous match in the file using the arrow keys. The <kbd>&uarr;</kbd> and
+<kbd>&larr;</kbd> keys will go to the previous match, and the <kbd>&darr;</kbd>
+and <kbd>&rarr;</kbd> keys will go to the next match.</p>
+<p>We'll implement this feature using two static variables in our callback.
+<code>last_match</code> will contain the index of the row that the last match was on, or
+<code>-1</code> if there was no last match. And <code>direction</code> will store the direction of
+the search: <code>1</code> for searching forward, and <code>-1</code> for searching backward.</p>
+<p>{{callback-statics}}</p>
+<p>As you can see, we always reset <code>last_match</code> to <code>-1</code> unless an arrow key was
+pressed. So we'll only advance to the next or previous match when an arrow key
+is pressed. You can also see that we always set <code>direction</code> to <code>1</code> unless the
+<kbd>&larr;</kbd> or <kbd>&uarr;</kbd> key was pressed. So we always search in
+the forward direction unless the user specifically asks to search backwards
+from the last match.</p>
+<p>If <code>key</code> is <code>'\r'</code> (<kbd>Enter</kbd>) or <code>'\x1b'</code> (<kbd>Escape</kbd>), that
+means we're about to leave search mode. So we reset <code>last_match</code> and
+<code>direction</code> to their initial values to get ready for the next search operation.</p>
+<p>Now that we have those variables all set up, let's put them to use.</p>
+<p>{{search-arrows}}</p>
+<p><code>current</code> is the index of the current row we are searching. If there was a last
+match, it starts on the line after (or before, if we're searching backwards).
+If there wasn't a last match, it starts at the top of the file and searches in
+the forward direction to find the first match.</p>
+<p>The <code>if ... else if</code> causes <code>current</code> to go from the end of the file back to
+the beginning of the file, or vice versa, to allow a search to "wrap around"
+the end of a file and continue from the top (or bottom).</p>
+<p>When we find a match, we set <code>last_match</code> to <code>current</code>, so that if the user
+presses the arrow keys, we'll start the next search from that point.</p>
+<p>Finally, let's not forget to update the prompt text to let the user know they
+can use the arrow keys.</p>
+<p>{{search-arrows-help}}</p>
+<p>In the <a href="07.syntaxHighlighting.html">next chapter</a>, we'll implement syntax
+highlighting and filetype detection, to complete our text editor.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="フッター">
+      
+        
+        <a href="../05aTextEditor/" class="md-footer__link md-footer__link--prev" aria-label="前: A text editor" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                前
+              </span>
+              A text editor
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../07syntaxHighlighting/" class="md-footer__link md-footer__link--next" aria-label="次: Syntax highlighting" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                次
+              </span>
+              Syntax highlighting
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f89c2efe.min.js"></script>
+      
+    
+  </body>
+</html>

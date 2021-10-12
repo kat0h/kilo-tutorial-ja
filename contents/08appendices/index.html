@@ -1,0 +1,759 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.3">
+    
+    
+      
+        <title>Appendices - Kilo tutorial</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.5143246d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#appendices" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../.." title="Kilo tutorial" class="md-header__button md-logo" aria-label="Kilo tutorial" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kilo tutorial
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Appendices
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="クリア" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Kilo tutorial" class="md-nav__button md-logo" aria-label="Kilo tutorial" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Kilo tutorial
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        自分自身のテキストエディターを作ろう
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Contents
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Contents" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01setup/" class="md-nav__link">
+        セットアップ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02enteringRawMode/" class="md-nav__link">
+        Rawモードに入る
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03rawInputAndOutput/" class="md-nav__link">
+        Raw input and output
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04aTextViewer/" class="md-nav__link">
+        A text viewer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05aTextEditor/" class="md-nav__link">
+        A text editor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06search/" class="md-nav__link">
+        Search
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07syntaxHighlighting/" class="md-nav__link">
+        Syntax highlighting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Appendices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Appendices
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-the-diffs-work" class="md-nav__link">
+    How the diffs work
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-to-do-if-you-are-stuck" class="md-nav__link">
+    What to do if you are stuck
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-to-get-help" class="md-nav__link">
+    Where to get help
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ideas-for-features-to-add-on-your-own" class="md-nav__link">
+    Ideas for features to add on your own
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#more-tutorials-like-this" class="md-nav__link">
+    More tutorials like this
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-contribute" class="md-nav__link">
+    How to contribute
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credits" class="md-nav__link">
+    Credits
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    License
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-the-diffs-work" class="md-nav__link">
+    How the diffs work
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-to-do-if-you-are-stuck" class="md-nav__link">
+    What to do if you are stuck
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-to-get-help" class="md-nav__link">
+    Where to get help
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ideas-for-features-to-add-on-your-own" class="md-nav__link">
+    Ideas for features to add on your own
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#more-tutorials-like-this" class="md-nav__link">
+    More tutorials like this
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-contribute" class="md-nav__link">
+    How to contribute
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credits" class="md-nav__link">
+    Credits
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    License
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="appendices">Appendices</h1>
+<h2 id="how-the-diffs-work">How the diffs work</h2>
+<p>Each step in this tutorial is presented as a diff. A diff shows you the changes
+you need to make to the previous step's code to get to the current step. Here's
+a sample diff, from step 7:</p>
+<p>{{icanon}}</p>
+<p>Each diff starts with a header that contains the filename of the file you need
+to edit ("kilo.c"), the step number ("Step 7"), and the step name ("icanon").
+You can click the filename to see the full source code of the file for the
+current step on GitHub. You can also click the step name on the far right to
+browse all files for the current step on GitHub (which isn't particularly
+useful for this tutorial, since we're just working on a single source file).</p>
+<p>After the header, the contents of the file are shown. Lines that need to be
+added or changed are highlighted and marked with an arrow. Functions that don't
+contain any changed code are folded into a single line with their contents
+hidden.</p>
+<p>Lines that need to be removed are given a red background, a
+<s>strike-through</s> style, and are marked with an ✕. Removed lines are not
+shown when they are adjacent to an added or changed line, so you won't see them
+very often.</p>
+<p>The bottom of each diff shows you the compile status of that step. If it's
+green and says "compiles", then you can expect your code to compile after
+completing the step, and you can expect to be able to observe the change when
+you run the program. If there are no observable changes for that step, then the
+compile status will be blue and say, "compiles, but with no observable
+effects". On the rare occasion that the step doesn't compile, it will be red
+and say "doesn't compile".</p>
+<h2 id="what-to-do-if-you-are-stuck">What to do if you are stuck</h2>
+<p>Some of the code in this tutorial is very tricky to type in exactly, especially
+if you're not used to C. It's especially easy to make a mistake when you're
+making a change to a line, and you think you're done changing that line, but
+you missed one little change to another part of that same line. It's important
+to take your time, and compare the changed parts of the diff
+<em>character-by-character</em> with your code to make sure they're the same.</p>
+<p>If you suspect you made an error, but don't know where it is or how far back
+you might've made the error, you should get your computer to do a diff between
+your version of <code>kilo.c</code> and the tutorial's version of <code>kilo.c</code> for whatever
+step you're on. The
+<a href="https://github.com/snaptoken/kilo-src">kilo-src</a> repository contains the
+<code>kilo.c</code> source code for every step in the tutorial.</p>
+<p>You will need <code>git</code> to do this. To install <code>git</code> (assuming you've completed
+<a href="01.setup.html">chapter 1</a>): on <strong>Ubuntu/Bash on Windows</strong>, run
+<code>sudo apt-get install git</code>; on <strong>Cygwin</strong>, run the installer again and select
+the <code>git</code> package for installation; on <strong>macOS</strong>, <code>git</code> should've been
+installed when you installed command line tools.</p>
+<p>Once you have <code>git</code> installed, clone the
+<a href="https://github.com/snaptoken/kilo-src">kilo-src</a> repository by running
+<code>git clone https://github.com/snaptoken/kilo-src</code>. <code>cd</code> into the repo using
+<code>cd kilo-src</code>. The repo has a
+<a href="https://git-scm.com/book/en/v2/Git-Basics-Tagging">tag</a> for each step that
+points the step name to that step's commit in the repo. So to get the source
+code for the step named <code>icanon</code>, run <code>git checkout icanon</code>. The <code>kilo.c</code> file
+will now contain the code for that step. You can compare your <code>kilo.c</code> with
+this <code>kilo.c</code> by running something like
+<code>git diff --no-index -b ../path/to/your/kilo.c kilo.c</code>. This will show you the
+changes you would need to make to your <code>kilo.c</code> to get it to look like the one
+in the repo. The <code>-b</code> option ignores whitespace, so it won't matter if you use
+a different indent style than the one in the tutorial.</p>
+<h2 id="where-to-get-help">Where to get help</h2>
+<p>If you are having trouble, feel free to create an
+<a href="https://github.com/snaptoken/kilo-tutorial/issues">issue</a> on the tutorial's
+<a href="https://github.com/snaptoken/kilo-tutorial">GitHub repo</a>, and ask a question.</p>
+<p>You can also <a href="mailto:jeremy.ruten@gmail.com">email me</a> directly if you'd rather
+not use GitHub.</p>
+<h2 id="ideas-for-features-to-add-on-your-own">Ideas for features to add on your own</h2>
+<p>If you want to extend <code>kilo</code> on your own, I suggest trying to actually <em>use</em>
+<code>kilo</code> as your text editor for a while. You will very quickly become painfully
+aware of all sorts of features you're used to having in a text editor, but are
+missing in <code>kilo</code>. Those are the features you should try to add. And you should
+use <code>kilo</code> when you work on <code>kilo.c</code>.</p>
+<p>If you're still looking for ideas, here's a small list, roughly in order of
+increasing difficulty.</p>
+<ul>
+<li><strong>More filetypes</strong>: Add syntax highlighting rules for some of your favourite
+  languages to the <code>HLDB</code> array.</li>
+<li><strong>Line numbers</strong>: Display the line number to the left of each line of the
+  file.</li>
+<li><strong>Soft indent</strong>: If you like using spaces instead of tabs, make the
+  <kbd>Tab</kbd> key insert spaces instead of <code>\t</code>. You may want
+  <kbd>Backspace</kbd> to remove a <kbd>Tab</kbd> key's worth of spaces as
+  well.</li>
+<li><strong>Auto indent</strong>: When starting a new line, indent it to the same level as the
+  previous line.</li>
+<li><strong>Hard-wrap lines</strong>: Insert a newline in the text when the user is about
+  to type past the end of the screen. Try not to insert the newline where it
+  would split up a word.</li>
+<li><strong>Soft-wrap lines</strong>: When a line is longer than the screen width, use
+  multiple lines on the screen to display it instead of horizontal scrolling.</li>
+<li><strong>Use ncurses</strong>: The <a href="https://en.wikipedia.org/wiki/Ncurses">ncurses</a>
+  library takes care of a lot of the low level terminal interaction for you,
+  and makes your program more portable.</li>
+<li><strong>Copy and paste</strong>: Give the user a way to select text, and then copy the
+  selected text when they press <kbd>Ctrl-C</kbd>, and let them paste the
+  copied text when they press <kbd>Ctrl-V</kbd>.</li>
+<li><strong>Config file</strong>: Have <code>kilo</code> read a config file (maybe named <code>.kilorc</code>) to
+  set options that are currently constants, like <code>KILO_TAB_STOP</code> and
+  <code>KILO_QUIT_TIMES</code>. Try to make more things configurable.</li>
+<li><strong>Modal editing</strong>: If you like <a href="http://www.vim.org/">vim</a>, make <code>kilo</code> work
+  more like vim by letting the user press <kbd>i</kbd> for "insert mode" and
+  then press <kbd>Escape</kbd> to go back to "normal mode". Then start adding
+  all your favourite vim commands, starting with the basic movement commands
+  (<kbd>h</kbd><kbd>j</kbd><kbd>k</kbd><kbd>l</kbd>).</li>
+<li><strong>Multiple buffers</strong>: Allow having multiple files open at once, and have some
+  way of switching between them.</li>
+</ul>
+<h2 id="more-tutorials-like-this">More tutorials like this</h2>
+<p>I am planning to make more tutorials like this one. They will all be available
+at <a href="http://viewsourcecode.org/snaptoken">viewsourcecode.org/snaptoken</a>. There
+is a link there that will let you sign up to receive an email whenever a new
+tutorial is available. There is also a list of similar tutorials by other
+people from around the web.</p>
+<p>The next tutorials will be a little different from this one. For example, one
+might be a <a href="https://passwordstore.org">password manager</a> in 700 lines of shell
+script, and another might be a
+<a href="https://github.com/camping/camping">web microframework</a> implemented as just a
+big rectangle of obfuscated Ruby.</p>
+<p>What the tutorials will have in common is the step-by-step build-it-yourself
+approach to reading and understanding the code of real open-source software
+projects. If there was a toy like Lego that involved putting <em>programs</em>
+together instead of physical structures, I think "snaptoken" would be a great
+name for it. That is the experience I'm trying to create with tutorials like
+this.</p>
+<h2 id="how-to-contribute">How to contribute</h2>
+<p>Contributions are welcome, whether it's changes to the text, the code, or the
+HTML/CSS.</p>
+<p>The text is in the <code>doc/</code> directory of the
+<a href="https://github.com/snaptoken/kilo-tutorial">kilo-tutorial</a> repo. Each chapter
+is a markdown (<code>.md</code>) file.</p>
+<p>The HTML/CSS is in the <code>doc/html_in/</code> directory.</p>
+<p>The code is in <code>steps.diff</code>, which isn't human-editable. It is generated by a
+program called <a href="https://github.com/yjerem/leg">leg</a>.</p>
+<p>If you are making significant changes to the text, you probably want to
+generate the final static HTML files, to preview your changes. Here is how to
+generate the HTML output using the <code>leg</code> program:</p>
+<ol>
+<li>You need to have
+   <a href="https://www.ruby-lang.org/en/documentation/installation/">Ruby</a> installed.</li>
+<li>Install the <code>leg</code> binary by running <code>gem install snaptoken</code> (you may need to
+   <code>sudo</code> this).</li>
+<li>Inside the <code>kilo-tutorial</code> repo, run <code>leg doc</code> to generate the static HTML
+   files in <code>doc/html_out/</code> and <code>doc/html_offline/</code>.</li>
+<li>When running <code>leg doc</code>, each step's diff is cached in a hidden dotfile, so
+   as long as you're only making changes to files in the <code>doc/</code> folder, you can
+   run <code>leg doc -c</code> to use the cached diffs and regenerate the HTML output way
+   faster.</li>
+</ol>
+<p>If you just have a small correction to make in the text, there is no need to go
+through all this. Just make the change in the chapter's markdown file and
+<a href="https://github.com/snaptoken/kilo-tutorial/pulls">submit a pull request</a>.</p>
+<h2 id="credits">Credits</h2>
+<p><a href="http://invece.org/">antirez</a> is the author of
+<a href="https://github.com/antirez/kilo">kilo</a>. He wrote a
+<a href="http://antirez.com/news/108">blog post</a> about it, in which he explains how he
+reused code from two of his other projects to quickly throw together <code>kilo</code> in
+just a few hours during a couple already busy weekends. It's not the sort of
+pristine code you usually see in programming tutorials, but I like it this way.
+I originally intended this tutorial to be an experimental form of documentation
+for his code, until I started making changes to the code all over the place to
+make for a better reading experience.</p>
+<p>I used many of the <a href="https://github.com/antirez/kilo/pulls">patches</a> submitted
+to the <code>kilo</code> GitHub page to fix various bugs in <code>kilo</code>. The
+<a href="https://github.com/practicalswift/openemacs">openemacs</a> project (a fork of
+<code>kilo</code>) was also helpful as a reference.</p>
+<p>I used <a href="https://github.com/vmg/redcarpet">redcarpet</a> to render the Markdown
+source of this tutorial to HTML, and I used
+<a href="https://github.com/jneen/rouge">rouge</a> for syntax highlighting.</p>
+<p>If you want to know more about me, see
+<a href="http://viewsourcecode.org">viewsourcecode.org</a>.</p>
+<h2 id="license">License</h2>
+<p>The <code>kilo</code> source code is released under the
+<a href="https://github.com/snaptoken/kilo-tutorial/blob/master/steps.diff.LICENSE">BSD 2-Clause</a>
+license.</p>
+<p>The rest of the tutorial is licensed under
+<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="フッター">
+      
+        
+        <a href="../07syntaxHighlighting/" class="md-footer__link md-footer__link--prev" aria-label="前: Syntax highlighting" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                前
+              </span>
+              Syntax highlighting
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f89c2efe.min.js"></script>
+      
+    
+  </body>
+</html>
